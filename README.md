@@ -1,28 +1,19 @@
-# Lanchengyu Diesel | B2B Export Website
+# LANCHENGYU Diesel B2B Website
 
-This repository contains the independent static website for **Nantong Lanchengyu International Trading Co., Ltd.**, focused on high-pressure common rail diesel injectors and fuel injection components for parts distributors and diesel repair workshops in South Africa, Nigeria, Tanzania, Côte d'Ivoire, Ghana and Egypt.
+An independent website for Nantong Lanchengyu International Trading Co., Ltd. This repository must remain completely separate from Liangrui Home, liangruihome.com, and Liangrui's ads/analytics configurations.
 
-## Live preview
+## Current release — reference database V2 (2026-10-30)
+- 80 technical reference records (55 complete injectors, 11 nozzles, 9 valves, 5 repair kits).
+- 67 entries from manufacturer-issued catalogues or bulletins, plus 13 with a distributor-hosted Delphi cross-reference guide.
+- `products.js`: client-side searchable technical reference index.
+- `products.csv` / `products.json`: research and source records.
+- English/French B2B buyer guidance, FAQ, search by manufacturer reference / OE number / engine / application.
+- Company WhatsApp: **+86 15301481237**.
 
-https://lanchengyu-diesel.vercel.app/
+**Important:** These are technical reference entries, NOT confirmed inventory, price, MOQ, interchangeability, product authenticity, manufacturer authorization, or delivery promises. Isuzu OE numbers containing `#` are incomplete number families. Obtain the exact suffix and verify engine/VIN and calibration before quoting.
 
-The website was initially deployed to the independent Vercel project **lanchengyu-diesel** as a static snapshot on 30 October 2026. The site is deployed and has a temporary Vercel domain; the final custom domain remains undecided.
+### Publishing controls
+The preview currently uses `noindex,nofollow` and disallows crawlers via `robots.txt`. Remove these preview protections only after the independent domain, actual stock/supplier documentation, and live RFQ flow are fully checked.
 
-**Important:** This initial Vercel release was uploaded directly as site files, not linked to GitHub auto-deploy. Later GitHub commits will NOT automatically update the live preview until Git integration is configured or the site is manually redeployed.
-
-## Features
-
-- Responsive desktop and mobile B2B product site
-- English and French page interface
-- Five product image assets and six catalog categories
-- Search / filtering by family and application
-- WhatsApp quote inquiries: **+86 15301481237**
-- Inquiry form copies a composed quote request, but **does not deliver email or store form submissions**.
-
-## Product-data limitations
-
-The catalog cards are product reference families only; model and OEM fitment, inventory, MOQ, price, warranty, shipping terms and lead time must be confirmed individually before making commercial claims. The current English/French toggle is not yet implemented as separate crawlable localized URLs.
-
-## Brand separation
-
-**Do not edit the Liangrui Home repository, domain, DNS, Google Ads, analytics, or any Liangrui files while working on this project.** This repository and its Vercel project are exclusively for Lanchengyu Diesel.
+### Deployment
+Publish `index.html`, `products.js`, and `assets/` together. Site is plain HTML + JS and does not store RFQs on a server. WhatsApp creates a message which the customer must manually send.
